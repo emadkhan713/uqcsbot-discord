@@ -34,6 +34,7 @@ class UQCSBot(commands.Bot):
         await self.web_server()
 
     async def admin_alert(
+<<<<<<< Updated upstream
         self, 
         title: str, 
         colour: discord.Colour, 
@@ -41,6 +42,15 @@ class UQCSBot(commands.Bot):
         footer: str = None, 
         fields: List[tuple] = None, 
         fields_inline: bool = True
+=======
+        self,
+        title: str,
+        colour: discord.Colour,
+        description: str | None = None,
+        footer: str | None = None,
+        fields: List[tuple] | None = None,
+        fields_inline: bool = True,
+>>>>>>> Stashed changes
     ):
         """ Sends an alert to the admin channel for logging. """
         admin_channel = discord.utils.get(self.uqcs_server.channels, name=ADMIN_ALERTS)
