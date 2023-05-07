@@ -106,13 +106,9 @@ class Event(object):
         return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
     @classmethod
-<<<<<<< Updated upstream
-    def from_cal_event(cls, cal_event, source: str = "UQCS", recurrence_dt: datetime = None):
-=======
     def from_cal_event(
         cls, cal_event, source: str = "UQCS", recurrence_dt: datetime | None = None
     ):
->>>>>>> Stashed changes
         """
         Converts an ical event to an Event
 
@@ -218,16 +214,12 @@ class Events(commands.Cog):
 
         return events
 
-<<<<<<< Updated upstream
-    async def send_events(self, channel: discord.abc.Messageable, interaction: discord.Interaction = None, *args):
-=======
     async def send_events(
         self,
         channel: discord.abc.Messageable,
         interaction: discord.Interaction | None = None,
         *args,
     ):
->>>>>>> Stashed changes
         current_time = self._get_current_time()
         event_filter = EventFilter.from_argument(args)
         events = []
